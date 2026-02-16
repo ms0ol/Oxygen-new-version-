@@ -5,7 +5,7 @@
     <link rel="apple-touch-icon" href="https://i.postimg.cc/CL52rzVc/a2043f1739b2da955eba5a2c1bbd0bb3.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Oxygen Nursing | أوكسجين - النسخة المتكاملة</title>
+    <title>Oxygen | أوكسجين  </title>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link href="https://fonts.googleapis.com/css?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -308,20 +308,20 @@
 
     [span_3](start_span)// القاموس الطبي[span_3](end_span)
     const medicalLibrary = [
-        {t: "Bradycardia", ar: "بطء نبضات القلب", c: "Prefix"},
-        {t: "Tachycardia", ar: "تسارع نبضات القلب", c: "Prefix"},
-        {t: "Hypertension", ar: "ارتفاع ضغط الدم", c: "Prefix"},
-        {t: "Hypotension", ar: "انخفاض ضغط الدم", c: "Prefix"},
+        {t: "Bradycardia", ar: "بطء نبضات القلب", c: "term"},
+        {t: "Tachycardia", ar: "تسارع نبضات القلب", c: "term"},
+        {t: "Hypertension", ar: "ارتفاع ضغط الدم", c: "term"},
+        {t: "Hypotension", ar: "انخفاض ضغط الدم", c: "term"},
         {t: "Gastritis", ar: "التهاب المعدة", c: "Suffix -itis"},
         {t: "Arthralgia", ar: "ألم المفاصل", c: "Suffix -algia"},
         {t: "Phlebitis", ar: "التهاب الوريد", c: "Suffix -itis"},
-        {t: "Cyanosis", ar: "ازرقاق الجلد (نقص أكسجين)", c: "Color"},
+        {t: "Cyanosis", ar: "ازرقاق الجلد (نقص أكسجين)", c: "term"},
         {t: "Erythrocyte", ar: "خلية دم حمراء", c: "Cells"},
         {t: "Leukocyte", ar: "خلية دم بيضاء", c: "Cells"},
-        {t: "Appendectomy", ar: "استئصال الزائدة", c: "Surgery"},
+        {t: "Appendectomy", ar: "استئصال الزائدة", c: "term"},
         {t: "NPO", ar: "لا شيء عن طريق الفم", c: "Abbr"},
-        {t: "Polyuria", ar: "كثرة التبول", c: "Signs"},
-        {t: "Hemiplegia", ar: "شلل نصفي", c: "Condition"}
+        {t: "Polyuria", ar: "كثرة التبول", c: "term"},
+        {t: "Hemiplegia", ar: "شلل نصفي", c: "term"}
     ];
 
     [span_4](start_span)// سجل المهارات[span_4](end_span)
@@ -359,7 +359,7 @@
     function adminGate() { 
         const p = prompt("رمز الدخول للمسؤولين:"); 
         if(p === "1234") setRole('admin'); 
-        else alert("غلط.. روح اقرأ محاضراتك!"); 
+        else alert("غلط.. روح سچ محاضراتك!"); 
     }
     function logout() { localStorage.clear(); location.reload(); }
 
@@ -472,8 +472,8 @@
         const mid = th + pr + dy;
         let res = `سعيك الحالي هو: <b>${mid} من 40</b><br><br>`;
         
-        if(mid < 15) res += "يا ستار! سعيك واكع.. الزم تفجر الفاينل تفجير حتى تنجح.";
-        else if(mid >= 15 && mid <= 25) res += "سعي معقول، يعني مو زين ولا مو شين.. شد حيلك.";
+        if(mid < 15) res += "يا ستار! سعيك واكع.. لازم تفجر الفاينل تفجير حتى تنجح.";
+        else if(mid >= 15 && mid <= 25) res += "سعي معقول، يعني لا زين ولا مو شين.. شد حيلك.";
         else res += "ما شاء الله! سعيك يرفع الراس.. استمر يا بطل ✨.";
 
         const needed = 50 - mid;
